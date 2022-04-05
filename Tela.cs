@@ -12,7 +12,7 @@ namespace xadrez_console
         {
           if (tab.peca(i, j) == null)
           {
-            System.Console.Write("- ");
+            Console.Write("- ");
           }
           else
           {
