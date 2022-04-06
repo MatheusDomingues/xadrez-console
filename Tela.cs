@@ -11,7 +11,7 @@ namespace xadrez_console
       Console.WriteLine();
       imprimirPecasCapturadas(partida);
       Console.WriteLine();
-      Console.WriteLine("Turno " + partida.turno);
+      Console.WriteLine("Turno: " + partida.turno);
       if (!partida.terminada)
       {
         Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
@@ -56,7 +56,6 @@ namespace xadrez_console
       for (int i = 0; i < tab.linhas; i++)
       {
         Console.Write(8 - i + " ");
-
         for (int j = 0; j < tab.colunas; j++)
         {
           imprimirPeca(tab.peca(i, j));
@@ -74,7 +73,6 @@ namespace xadrez_console
       for (int i = 0; i < tab.linhas; i++)
       {
         Console.Write(8 - i + " ");
-
         for (int j = 0; j < tab.colunas; j++)
         {
           if (posicoesPossiveis[i, j])
@@ -123,7 +121,6 @@ namespace xadrez_console
         }
         Console.Write(" ");
       }
-
     }
   }
 }

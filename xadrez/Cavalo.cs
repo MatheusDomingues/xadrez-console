@@ -15,7 +15,7 @@ namespace xadrez
 
     private bool podeMover(Posicao pos)
     {
-      Peca p = tab.peca(pos.linha, pos.coluna);
+      Peca p = tab.peca(pos);
       return p == null || p.cor != cor;
     }
 

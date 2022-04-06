@@ -43,11 +43,11 @@ namespace tabuleiro
     {
       if (peca(pos) == null)
       {
-        return null!;
+        return null;
       }
       Peca aux = peca(pos);
       aux.posicao = null;
-      pecas[pos.linha, pos.coluna] = null!;
+      pecas[pos.linha, pos.coluna] = null;
       return aux;
     }
 

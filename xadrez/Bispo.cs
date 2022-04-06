@@ -15,7 +15,7 @@ namespace xadrez
 
     private bool podeMover(Posicao pos)
     {
-      Peca p = tab.peca(pos.linha, pos.coluna);
+      Peca p = tab.peca(pos);
       return p == null || p.cor != cor;
     }
 
@@ -36,6 +36,7 @@ namespace xadrez
         }
         pos.definirValores(pos.linha - 1, pos.coluna - 1);
       }
+
       // NE
       pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
       while (tab.posicaoValida(pos) && podeMover(pos))
@@ -47,6 +48,7 @@ namespace xadrez
         }
         pos.definirValores(pos.linha - 1, pos.coluna + 1);
       }
+
       // SE
       pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
       while (tab.posicaoValida(pos) && podeMover(pos))
@@ -58,6 +60,7 @@ namespace xadrez
         }
         pos.definirValores(pos.linha + 1, pos.coluna + 1);
       }
+
       // SO
       pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
       while (tab.posicaoValida(pos) && podeMover(pos))
